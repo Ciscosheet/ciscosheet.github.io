@@ -1,15 +1,18 @@
+<html>
+<p>
 Router Modes:
 Router>: User mode = Limited to basic monitoring commands
 Router#: Privileged mode (exec-level mode) = Provides access to all other router commands
 Router(config)#: global configuration mode = Commands that affect the entire system
 Router(config-if)#: interface mode = Commands that affect interfaces
 Router(config-subif)#: subinterface mode = Commands that affect subinterfaces
-Router(config-line)#: line mode = Commands that affect in lines modes (console, vty, auxï¿½)
+Router(config-line)#: line mode = Commands that affect in lines modes (console, vty, aux…)
 Router(config-router)#: router configuration mode
 Changing switch hostname:
 1
 Switch(config)# hostname SW1
 Configuring passwords:
+1
 2
 SW1(config)# enable secret cisco    ! MD5 hash
 SW1(config)# enable password notcisco    ! Clear text
@@ -63,15 +66,15 @@ Saving configuration:
 9
 SW1# copy running-config startup-config
 Destination filename [startup-config]?    ! Press enter to confirm file name.
-Building configurationï¿½
+Building configuration…
 [OK]
  
 ! Short for write memory.
 SW1# wr
-Building configurationï¿½
+Building configuration…
 [OK]
 Working environment:
-name lookup, history, exec-timeout and logging behaviorï¿½, also valid for line con 0.
+name lookup, history, exec-timeout and logging behavior…, also valid for line con 0.
 
 1
 2
@@ -129,7 +132,7 @@ SW1(config)# interface fastEthernet 0/1
 SW1(config-if)# description LINK TO INTERNET ROUTER
 SW1(config-if)# speed 100    ! Options: 10, 100, auto
 ! The range keyword used to set a group of interfaces at once.
-SW1(config)# interface range fastEthernet 0/5 ï¿½ 10
+SW1(config)# interface range fastEthernet 0/5 – 10
 SW1(config-if-range)# duplex full (options: half, full, auto)
 Verify Basic Configuration:
 Shows information about the switch and its interfaces, RAM, NVRAM, flash, IOS, etc.
@@ -422,7 +425,7 @@ R1(config)# line vty 0 4
 R1(config-line)# login local
 R1(config-line)# transport input telnet ssh
 Configuring router interfaces:
-Clock rate is set only on the DCE side, typically the ISP side. On your router which is DTE you donï¿½t need to set clocking.
+Clock rate is set only on the DCE side, typically the ISP side. On your router which is DTE you don’t need to set clocking.
 
 1
 2
@@ -659,7 +662,7 @@ Lists statistics on numbers of EIGRP messages sent and received by the router:
 R1# show ip eigrp traffic
 
 Access Control Lists:
-Standard ACL: 1 ï¿½ 99 and 1300 ï¿½ 1999
+Standard ACL: 1 – 99 and 1300 – 1999
 Use a remark to describe the ACL (Optional):
 1
 R1(config)# access-list 1 remark ACL TO DENY ACCESS FROM SALES VLAN
@@ -692,7 +695,7 @@ Apply the ACL inbound the vty lines
 2
 R1(config)# line vty 0 4
 R1(config-line)# access-class 99 in
-Extended ACL: 100 ï¿½ 199 and 2000 ï¿½ 2699
+Extended ACL: 100 – 199 and 2000 – 2699
 Extended ACL should be placed as close as possible to the source of the packet.
 Extended ACL matches packets based on source & des.IP addresses, protocol, source & des. Port numbers andother criteria as well
 1
@@ -995,5 +998,5 @@ R1# clear ip nat translations *
 Issues a log message describing each packet whose ip address is translated with NAT:
 1
 R1# debug ip nat
-
-
+</p>
+</html>
